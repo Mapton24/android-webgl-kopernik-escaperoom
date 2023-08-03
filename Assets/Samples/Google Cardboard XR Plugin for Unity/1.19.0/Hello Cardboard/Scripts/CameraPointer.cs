@@ -1,4 +1,4 @@
-//-----------------------------------------------------------------------
+﻿//-----------------------------------------------------------------------
 // <copyright file="CameraPointer.cs" company="Google LLC">
 // Copyright 2020 Google LLC
 //
@@ -16,8 +16,11 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Sends messages to gazed GameObject.
@@ -27,36 +30,83 @@ public class CameraPointer : MonoBehaviour
     private const float _maxDistance = 10;
     private GameObject _gazedAtObject = null;
 
-    /// <summary>
-    /// Update is called once per frame.
-    /// </summary>
-    public void Update()
+    // Akcje dla eventów do obiektu (Enter = patrzy, Exit = nie patrzy, Click = wciśnięcie gdy patrzymy)
+    private Action<GameObject, BaseEventData> pointerEnterAction;
+    private Action<GameObject, BaseEventData> pointerExitAction;
+    private Action<GameObject, BaseEventData> pointerClickAction;
+
+    private void Awake()
     {
-        // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
-        // at.
+        //Inicjalizujemy akcje dla każdego typu eventów do obiektów 
+        pointerEnterAction = ExecutePointerEvent<IPointerEnterHandler>(ExecutePointerEnter);
+        pointerExitAction = ExecutePointerEvent<IPointerExitHandler>(ExecutePointerExit);
+        pointerClickAction = ExecutePointerEvent<IPointerClickHandler>(ExecutePointerClick);
+    }
+
+    private void Update()
+    {
+        // Wystrzeliwuje niewidzialny laser, który jest cały czas na środku ekranu, potrzebny żeby obiekty wiedziały że sie na nie patrzy.
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
-            // GameObject detected in front of the camera.
+            //Obiekt który jest obserwowany
             if (_gazedAtObject != hit.transform.gameObject)
             {
-                // New GameObject.
-                _gazedAtObject?.SendMessage("OnPointerExit");
+                //Odpala sie event OnPointerExit na poprzednim obiekcie
+                ExecuteIfNotNull(_gazedAtObject, pointerExitAction);
                 _gazedAtObject = hit.transform.gameObject;
-                _gazedAtObject.SendMessage("OnPointerEnter");
+                //Odpala sie event OnPointerEnter na nowym obiekcie
+                ExecuteIfNotNull(_gazedAtObject, pointerEnterAction);
             }
         }
         else
         {
-            // No GameObject detected in front of the camera.
-            _gazedAtObject?.SendMessage("OnPointerExit");
+            //Odpala się kiedy nie mamy obiektu na kamerze, odpala się OnPointerExit na poprzednim obiekcie
+            ExecuteIfNotNull(_gazedAtObject, pointerExitAction);
             _gazedAtObject = null;
         }
+        Debug.DrawRay(transform.position, transform.forward * _maxDistance, Color.red);
 
-        // Checks for screen touches.
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
+        //Sprawdzamy czy kliknęliśmy ekran telefonu czy LMB 
+        if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetMouseButtonDown(0))
         {
-            _gazedAtObject?.SendMessage("OnPointerClick");
+            //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
+            ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
         }
+    }
+
+    //Metoda która sprawdza czy dany obiekt jest null, jeżeli nie jest to robi event.
+    private void ExecuteIfNotNull(GameObject obj, Action<GameObject, BaseEventData> action)
+    {
+        if (obj != null)
+        {
+            var eventData = new BaseEventData(EventSystem.current);
+            action(obj, eventData);
+        }
+    }
+
+    private Action<GameObject, BaseEventData> ExecutePointerEvent<T>(Action<GameObject, BaseEventData> action)
+        where T : IEventSystemHandler
+    {
+        return (target, eventData) =>
+        {
+            //Egzekucja specyficznej akcji na danym obiekcie.
+            action(target, eventData);
+        };
+    }
+
+    private void ExecutePointerEnter(GameObject target, BaseEventData eventData)
+    {
+        ExecuteEvents.Execute<IPointerEnterHandler>(target, eventData, (x, y) => x.OnPointerEnter(null));
+    }
+
+    private void ExecutePointerExit(GameObject target, BaseEventData eventData)
+    {
+        ExecuteEvents.Execute<IPointerExitHandler>(target, eventData, (x, y) => x.OnPointerExit(null));
+    }
+
+    private void ExecutePointerClick(GameObject target, BaseEventData eventData)
+    {
+        ExecuteEvents.Execute<IPointerClickHandler>(target, eventData, (x, y) => x.OnPointerClick(null));
     }
 }
