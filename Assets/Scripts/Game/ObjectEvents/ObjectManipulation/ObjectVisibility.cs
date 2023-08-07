@@ -2,11 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectVisibility : MonoBehaviour
+public class ObjectVisibility : MonoBehaviour, ICutsceneAction
 {
     [SerializeField] private GameObject objectToToggle;
+    [SerializeField] bool shouldHideObject;
+    [SerializeField] bool shouldShowObject;
+    public void ChangeObjectVisibility()
+    {
+        if (shouldHideObject)
+        {
+            HideObject();
+        } else if (shouldShowObject)
+        {
+            ShowObject();
+        }
+    }
 
-    public void HideObject()
+    public void ExecuteAction()
+    {
+        ChangeObjectVisibility();
+    }
+
+    private void HideObject()
     {
         if (objectToToggle != null)
         {
@@ -14,7 +31,7 @@ public class ObjectVisibility : MonoBehaviour
         }
     }
 
-    public void ShowObject()
+    private void ShowObject()
     {
         if (objectToToggle != null)
         {
