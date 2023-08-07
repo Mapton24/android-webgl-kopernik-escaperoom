@@ -22,6 +22,12 @@ public class CutsceneEventLinker : CutsceneActionBase
         {
             cutsceneAction.ExecuteAction();
         }
+        CleanSubscriptions();
+    }
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        CleanSubscriptions();
     }
 
 }
