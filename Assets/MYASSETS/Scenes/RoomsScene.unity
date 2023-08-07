@@ -817,8 +817,6 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   objectToChangeVisibility: {fileID: 1351587684}
-  shouldHideObject: 1
-  shouldShowObject: 0
 --- !u!1 &71284602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 512186540}
+  shouldHideObject: 1
+  shouldShowObject: 0
 --- !u!1 &201934129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10366,8 +10366,6 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   objectToChangeVisibility: {fileID: 1328787925}
-  shouldHideObject: 0
-  shouldShowObject: 1
 --- !u!4 &1013284015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460100, guid: 5819cea5b13f2934a8e13996ff748543, type: 3}
@@ -13107,6 +13105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 1492533628}
+  shouldHideObject: 0
+  shouldShowObject: 0
 --- !u!1 &1333029550
 GameObject:
   m_ObjectHideFlags: 0
@@ -13431,6 +13431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 1492533628}
+  shouldHideObject: 0
+  shouldShowObject: 0
 --- !u!1 &1366337817
 GameObject:
   m_ObjectHideFlags: 0
@@ -15898,15 +15900,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1551960030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0445cfd46bbd13045a50bf797d767e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1130863176}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  objectToChangeVisibility: {fileID: 201564715}
-  shouldHideObject: 1
-  shouldShowObject: 0
+  linkedAction: {fileID: 201564715}
 --- !u!1001 &1574171381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19645,13 +19645,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912317901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5fd2ed63bd80940b516b0c8f67d844, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1588197272}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  player: {fileID: 1719304346}
+  linkedAction: {fileID: 1719304346}
 --- !u!1001 &1915015347
 PrefabInstance:
   m_ObjectHideFlags: 0
