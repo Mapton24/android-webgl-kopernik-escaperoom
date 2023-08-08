@@ -11,16 +11,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject gameCursor;
     private bool isPaused = false;
-    private bool cursorLocked = true;
+    //private bool cursorLocked = true;
 
     private void Start()
     {
         if (Cursor.lockState == CursorLockMode.None)
         {
-            cursorLocked = false;
+            //cursorLocked = false;
         } else
         {
-            cursorLocked = true;
+           // cursorLocked = true;
         }
 
     }
@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cursorLocked = true;
+       // cursorLocked = true;
     }
     private void Pause()
     {
@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        cursorLocked = false;
+       // cursorLocked = false;
     }
     public void Options()
     {

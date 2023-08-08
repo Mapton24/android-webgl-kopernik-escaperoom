@@ -30,7 +30,6 @@ public class SolarRiddle : MonoBehaviour
         allObjectsSnatched = false;
         riddleSolved = false;
         animator = GetComponent<Animator>();
-        Debug.Log("How many inside the list: " + skinnedMeshRenderers.Count);
     }
     public bool RiddleSolved()
     {
