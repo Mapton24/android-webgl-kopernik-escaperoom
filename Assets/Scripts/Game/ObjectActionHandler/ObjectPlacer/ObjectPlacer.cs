@@ -63,7 +63,6 @@ public class ObjectPlacer : MonoBehaviour
 
             OnCorrectObjectSnatched?.Invoke(this);
         }
-        Debug.Log("Good object");
     }
     private void SnatchIncorrectObject(ObjectHolder objectHolder, GameObject heldObject)
     {
@@ -73,7 +72,6 @@ public class ObjectPlacer : MonoBehaviour
             heldObjectRigidbody.isKinematic = false;
             ResetObjectTransforms(objectHolder, heldObject);
         }
-        Debug.Log("Bad object");
     }
 
     private void DisableCapsuleCollider(GameObject heldObject)

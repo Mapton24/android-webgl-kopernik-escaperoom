@@ -7,7 +7,6 @@ public class StartRiddle : MonoBehaviour, ICutsceneAction
     [SerializeField] SolarRiddle solarRiddle;
     [SerializeField] CutsceneSequencer winSequencer;
     private bool hasInitializedWinCutscene = false;
-    private bool isRiddleSolved = false;
     private bool isUsingSequencer = false;
     private void Awake()
     {
