@@ -8,14 +8,14 @@ public class StopSoundInCutscene : CutsceneActionBase
     {
         if (shouldWorkOnCutsceneStart && stopper != null)
         {
-            stopper.StopSound();
+            stopper.ExecuteAction();
         }
     }
     protected override void HandleCutsceneEnd()
     {
         if (shouldWorkOnCutsceneEnd && stopper != null)
         {
-            stopper.StopSound();
+            stopper.ExecuteAction();
         }
     }
 }

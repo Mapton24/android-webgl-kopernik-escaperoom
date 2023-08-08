@@ -36,6 +36,8 @@ public class StartRiddle : MonoBehaviour, ICutsceneAction
         {
             winSequencer.StartNextCutscene();
             hasInitializedWinCutscene = true;
+
+            Destroy(this);
         }
     }
     public void ExecuteAction()

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundStopper : MonoBehaviour
+public class SoundStopper : MonoBehaviour, ICutsceneAction
 {
     [SerializeField]
     private AudioSource audioSource;
     [SerializeField]
     private float fadeOutTime = 3.0f;
 
-    public void StopSound()
+    public void ExecuteAction()
     {
         if (audioSource != null)
             StartCoroutine(FadeOutAndStop());

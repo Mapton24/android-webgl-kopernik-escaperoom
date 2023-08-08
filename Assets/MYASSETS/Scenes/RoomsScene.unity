@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 38484115}
   - component: {fileID: 38484119}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: WebGLSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,6 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69975139}
   - component: {fileID: 69975140}
+  - component: {fileID: 69975141}
   m_Layer: 0
   m_Name: HideSun - Sequence 14
   m_TagString: Untagged
@@ -808,7 +809,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69975138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0445cfd46bbd13045a50bf797d767e3a, type: 3}
   m_Name: 
@@ -817,6 +818,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   objectToChangeVisibility: {fileID: 1351587684}
+--- !u!114 &69975141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69975138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1418075686}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 1351587684}
 --- !u!1 &71284602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2712,7 @@ GameObject:
   - component: {fileID: 238263586}
   - component: {fileID: 238263585}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: WebGLSpehere2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10584,7 +10601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1328787924}
+  - {fileID: 1622815191}
   - {fileID: 1333029551}
   - {fileID: 1529335691}
   m_Father: {fileID: 1114719915}
@@ -11982,6 +11999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183890292}
   - component: {fileID: 1183890293}
+  - component: {fileID: 1183890294}
   m_Layer: 0
   m_Name: Shockwave - Sequence 14
   m_TagString: Untagged
@@ -12012,7 +12030,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183890291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abf91455771086f4a8ad4eb402f9682b, type: 3}
   m_Name: 
@@ -12021,6 +12039,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   shockwave: {fileID: 1437051264}
+--- !u!114 &1183890294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183890291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1418075686}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 1437051264}
 --- !u!4 &1210180166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423048, guid: bf9f4253a04c3724e8628d1f0046c866, type: 3}
@@ -13342,12 +13376,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328787923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1010864620}
+  m_Father: {fileID: 1622815191}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1328787925
@@ -13364,7 +13398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 1492533628}
   shouldHideObject: 0
-  shouldShowObject: 0
+  shouldShowObject: 1
 --- !u!1 &1333029550
 GameObject:
   m_ObjectHideFlags: 0
@@ -13375,8 +13409,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1333029551}
   - component: {fileID: 1333029552}
+  - component: {fileID: 1333029553}
   m_Layer: 0
-  m_Name: TurnOffOpeningMusic
+  m_Name: StopMusic - Sequence 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13405,7 +13440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333029550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 718c36df333b5dd4b9bbb476f9cb0edb, type: 3}
   m_Name: 
@@ -13414,6 +13449,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   stopper: {fileID: 1067160590}
+--- !u!114 &1333029553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333029550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 138478531}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 1067160590}
 --- !u!4 &1333247113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4585060622950652, guid: 86d84285ef39db64c986f37878b14861, type: 3}
@@ -13735,7 +13786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 1492533628}
-  shouldHideObject: 0
+  shouldHideObject: 1
   shouldShowObject: 0
 --- !u!1 &1366337817
 GameObject:
@@ -14423,6 +14474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446773780}
   - component: {fileID: 1446773781}
+  - component: {fileID: 1446773782}
   m_Layer: 0
   m_Name: KopernikAnimate - Sequence 14
   m_TagString: Untagged
@@ -14441,7 +14493,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1563280671}
   m_Father: {fileID: 431661570}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14452,7 +14505,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446773779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
   m_Name: 
@@ -14462,6 +14515,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneEnd: 1
   animator: {fileID: 6174157}
   animationTrigger: Think
+--- !u!114 &1446773782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446773779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1418075686}
+  shouldWorkOnCutsceneStart: 0
+  shouldWorkOnCutsceneEnd: 1
+  linkedAction: {fileID: 1563280672}
 --- !u!1 &1449386074
 GameObject:
   m_ObjectHideFlags: 0
@@ -16019,8 +16088,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1529335691}
   - component: {fileID: 1529335692}
+  - component: {fileID: 1529335693}
   m_Layer: 0
-  m_Name: TurnOnOpeningMusic
+  m_Name: PlayEndingMusic - Sequence 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16049,7 +16119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529335690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef5fd2ed63bd80940b516b0c8f67d844, type: 3}
   m_Name: 
@@ -16058,6 +16128,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   player: {fileID: 1381553301}
+--- !u!114 &1529335693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529335690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1021032842}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 1381553301}
 --- !u!1001 &1532342569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16276,6 +16362,52 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   linkedAction: {fileID: 201564715}
+--- !u!1 &1563280670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563280671}
+  - component: {fileID: 1563280672}
+  m_Layer: 0
+  m_Name: ObjectAnimate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1563280671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563280670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1446773780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563280672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563280670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37d406907fdf104eaecdedafed4903c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6174157}
+  animationTrigger: Think
 --- !u!1001 &1574171381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17075,6 +17207,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437120, guid: a898a664488ed1147b5b3d6aecd095f1, type: 3}
   m_PrefabInstance: {fileID: 1617403236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1622815190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622815191}
+  - component: {fileID: 1622815192}
+  m_Layer: 0
+  m_Name: ShowSun - Sequence 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622815191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622815190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1328787924}
+  m_Father: {fileID: 1010864620}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622815192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622815190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 138478531}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 1328787925}
 --- !u!1001 &1633262909
 PrefabInstance:
   m_ObjectHideFlags: 0

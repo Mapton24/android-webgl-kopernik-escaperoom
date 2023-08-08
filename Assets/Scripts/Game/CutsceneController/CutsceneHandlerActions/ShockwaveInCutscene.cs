@@ -8,10 +8,10 @@ public class ShockwaveInCutscene : CutsceneActionBase
 
     protected override void HandleCutsceneStart()
     {
-        shockwave.ApplyShockwave();
+        shockwave.ExecuteAction();
     }
     protected override void HandleCutsceneEnd()
     {
-        shockwave.ApplyShockwave();
+        shockwave.ExecuteAction();
     }
 }
