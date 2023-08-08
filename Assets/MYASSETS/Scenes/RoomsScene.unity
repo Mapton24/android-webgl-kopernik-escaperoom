@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 38484115}
   - component: {fileID: 38484119}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: WebGLSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &38484119
 Rigidbody:
@@ -768,55 +768,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1278063397116392128, guid: 1d9566a9082557f47ad3ceb4b2370744, type: 3}
   m_PrefabInstance: {fileID: 401639948}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &69975138
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 69975139}
-  - component: {fileID: 69975140}
-  m_Layer: 0
-  m_Name: HideSun - Sequence 14
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &69975139
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69975138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1351587683}
-  m_Father: {fileID: 431661570}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &69975140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69975138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0445cfd46bbd13045a50bf797d767e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 1418075686}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  objectToChangeVisibility: {fileID: 1351587684}
 --- !u!1 &71284602
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +867,7 @@ Transform:
   - {fileID: 1429660894}
   - {fileID: 256923932}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &76533765
 GameObject:
@@ -927,7 +878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76533766}
-  - component: {fileID: 76533767}
+  - component: {fileID: 76533768}
   m_Layer: 0
   m_Name: SolarRiddleStart - Sequence 14
   m_TagString: Untagged
@@ -946,11 +897,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1341064208}
   m_Father: {fileID: 431661570}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &76533767
+--- !u!114 &76533768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -959,14 +911,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 76533765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d466525cb33f0784195a689dff607f6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1418075686}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  solarRiddle: {fileID: 6809760745491897989}
-  winSequencer: {fileID: 2048892587}
+  linkedAction: {fileID: 1341064209}
 --- !u!1001 &92695238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1291,6 +1242,52 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6424396, guid: 0decf664aa10e334dac700e1299b0eed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0decf664aa10e334dac700e1299b0eed, type: 3}
+--- !u!1 &109236399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109236400}
+  - component: {fileID: 109236401}
+  m_Layer: 0
+  m_Name: ObjectAnimate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &109236400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109236399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 639580647}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109236401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109236399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37d406907fdf104eaecdedafed4903c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6174157}
+  animationTrigger: SolveRiddle
 --- !u!1001 &111199607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1695,7 +1692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 138478530}
   - component: {fileID: 138478531}
-  - component: {fileID: 138478532}
   m_Layer: 0
   m_Name: Sequence 1 - Simple
   m_TagString: Untagged
@@ -1737,23 +1733,6 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 610958651}
---- !u!114 &138478532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138478529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 138478531}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  animator: {fileID: 6174157}
-  animationTrigger: SolveRiddle
 --- !u!1001 &138924315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2677,7 +2656,7 @@ GameObject:
   - component: {fileID: 238263586}
   - component: {fileID: 238263585}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: WebGLSpehere2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2769,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &239202535
 PrefabInstance:
@@ -3836,52 +3815,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d9566a9082557f47ad3ceb4b2370744, type: 3}
---- !u!1 &409000097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 409000098}
-  - component: {fileID: 409000099}
-  m_Layer: 0
-  m_Name: BoneRotation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &409000098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409000097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1478973763}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &409000099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409000097}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd06a5d650c863499f720211e5551f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bone: {fileID: 0}
-  rotationSpeed: 50
 --- !u!1001 &413103978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4134,7 +4067,6 @@ Transform:
   - {fileID: 1236250631}
   - {fileID: 76533766}
   - {fileID: 1183890292}
-  - {fileID: 69975139}
   - {fileID: 1446773780}
   m_Father: {fileID: 716776972}
   m_RootOrder: 2
@@ -6535,7 +6467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610958650
 GameObject:
@@ -6772,6 +6704,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf9f4253a04c3724e8628d1f0046c866, type: 3}
+--- !u!1 &639580646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639580647}
+  - component: {fileID: 639580648}
+  m_Layer: 0
+  m_Name: KopernikAnimate - Sequence 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639580647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639580646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 109236400}
+  m_Father: {fileID: 1010864620}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &639580648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639580646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 138478531}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 109236401}
 --- !u!1 &644533927
 GameObject:
   m_ObjectHideFlags: 0
@@ -7399,7 +7380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 688212790}
-  - component: {fileID: 688212791}
   - component: {fileID: 688212792}
   m_Layer: 0
   m_Name: MoveSolarSystem - Sequence 2
@@ -7424,24 +7404,6 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &688212791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688212789}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6c1f04da3c7ec429e4dbdeb01889fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 1130863176}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  objectToMove: {fileID: 5184144533499938137}
-  targetPosition: {fileID: 741287896}
-  movementDuration: 15
 --- !u!114 &688212792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7458,6 +7420,52 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   linkedAction: {fileID: 953222185}
+--- !u!1 &699271210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699271211}
+  - component: {fileID: 699271212}
+  m_Layer: 0
+  m_Name: ObjectAnimate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699271211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699271210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076850491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699271212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699271210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37d406907fdf104eaecdedafed4903c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6809760745491897988}
+  animationTrigger: SolveRiddle
 --- !u!1 &702531034
 GameObject:
   m_ObjectHideFlags: 0
@@ -7660,7 +7668,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713648480}
-  - component: {fileID: 713648481}
   - component: {fileID: 713648482}
   m_Layer: 0
   m_Name: KopernikAnimate - Sequence 2
@@ -7685,23 +7692,6 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &713648481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713648479}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 1130863176}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  animator: {fileID: 6174157}
-  animationTrigger: ShowSky
 --- !u!114 &713648482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8749,6 +8739,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437120, guid: a898a664488ed1147b5b3d6aecd095f1, type: 3}
   m_PrefabInstance: {fileID: 825342610}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &843149875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843149876}
+  - component: {fileID: 843149877}
+  m_Layer: 0
+  m_Name: ChangeSkyBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843149876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843149875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 935616781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843149877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843149875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff448e2118ae7cb44b465cccecab8817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToChange: {fileID: 33714659}
 --- !u!1001 &849094720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9751,7 +9786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935616781}
-  - component: {fileID: 935616782}
+  - component: {fileID: 935616783}
   m_Layer: 0
   m_Name: ChangeCameraSkyBox - Sequence 1
   m_TagString: Untagged
@@ -9770,11 +9805,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 843149876}
   m_Father: {fileID: 431661570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &935616782
+--- !u!114 &935616783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9783,13 +9819,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 935616780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd6969ac6b5f86459ad9770a5b57340, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1588197272}
   shouldWorkOnCutsceneStart: 0
   shouldWorkOnCutsceneEnd: 1
-  cameraToChange: {fileID: 33714659}
+  linkedAction: {fileID: 843149877}
 --- !u!4 &936822295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460100, guid: 5819cea5b13f2934a8e13996ff748543, type: 3}
@@ -10163,7 +10199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5184144533499938138}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &985330563
 MonoBehaviour:
@@ -10592,7 +10628,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1010864620}
-  - component: {fileID: 1010864621}
   m_Layer: 0
   m_Name: VictoryEvents
   m_TagString: Untagged
@@ -10612,28 +10647,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1328787924}
   - {fileID: 1333029551}
   - {fileID: 1529335691}
+  - {fileID: 639580647}
+  - {fileID: 1076850491}
   m_Father: {fileID: 1114719915}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1010864621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010864619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0445cfd46bbd13045a50bf797d767e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 138478531}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  objectToChangeVisibility: {fileID: 1328787925}
 --- !u!4 &1013284015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460100, guid: 5819cea5b13f2934a8e13996ff748543, type: 3}
@@ -10649,7 +10669,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1021032840}
   - component: {fileID: 1021032842}
-  - component: {fileID: 1021032841}
   m_Layer: 0
   m_Name: Sequence 2 -Simple
   m_TagString: Untagged
@@ -10672,23 +10691,6 @@ Transform:
   m_Father: {fileID: 2048892586}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1021032841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021032839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 1021032842}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  animator: {fileID: 6809760745491897988}
-  animationTrigger: SolveRiddle
 --- !u!114 &1021032842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10738,7 +10740,7 @@ Transform:
   m_Children:
   - {fileID: 173663246}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1051503246
 PrefabInstance:
@@ -11182,6 +11184,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2521186, y: 0.98140186, z: 1.3268945}
   m_Center: {x: 0.04874903, y: 0.4550636, z: -0.0022936165}
+--- !u!1 &1076850490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076850491}
+  - component: {fileID: 1076850492}
+  m_Layer: 0
+  m_Name: SolarAnimate - Sequence 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076850491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076850490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 699271211}
+  m_Father: {fileID: 1010864620}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076850492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076850490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1021032842}
+  shouldWorkOnCutsceneStart: 1
+  shouldWorkOnCutsceneEnd: 0
+  linkedAction: {fileID: 699271212}
 --- !u!1001 &1083019210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12009,7 +12060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183890292}
-  - component: {fileID: 1183890293}
+  - component: {fileID: 1183890294}
   m_Layer: 0
   m_Name: Shockwave - Sequence 14
   m_TagString: Untagged
@@ -12033,7 +12084,7 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1183890293
+--- !u!114 &1183890294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12042,13 +12093,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183890291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf91455771086f4a8ad4eb402f9682b, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1418075686}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  shockwave: {fileID: 1437051264}
+  linkedAction: {fileID: 1437051264}
 --- !u!4 &1210180166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423048, guid: bf9f4253a04c3724e8628d1f0046c866, type: 3}
@@ -12147,7 +12198,7 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 1
   bone: {fileID: 249499372}
-  rotationSpeed: 100
+  rotationSpeed: 50
 --- !u!4 &1218511675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427796, guid: 4b8bcfc52cd181349906c1279e1d513f, type: 3}
@@ -12602,7 +12653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236250631}
-  - component: {fileID: 1236250632}
+  - component: {fileID: 1236250633}
   m_Layer: 0
   m_Name: 'EnableAnimator - Sequence 13 '
   m_TagString: Untagged
@@ -12621,11 +12672,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1504564456}
   m_Father: {fileID: 431661570}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236250632
+--- !u!114 &1236250633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12634,17 +12686,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236250630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3d51e8b14f6d742bb2b89bd77468de, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1298496986}
   shouldWorkOnCutsceneStart: 0
   shouldWorkOnCutsceneEnd: 1
-  animator: {fileID: 6809760745491897988}
-  shouldEnableAnimatorOnStart: 0
-  shouldDisableAnimatorOnStart: 0
-  shouldEnableAnimatorOnEnd: 1
-  shouldDisableAnimatorOnEnd: 0
+  linkedAction: {fileID: 1504564457}
 --- !u!1001 &1247939189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13328,53 +13376,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437120, guid: a898a664488ed1147b5b3d6aecd095f1, type: 3}
   m_PrefabInstance: {fileID: 1315138204}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1328787923
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1328787924}
-  - component: {fileID: 1328787925}
-  m_Layer: 0
-  m_Name: ShowSun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1328787924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328787923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1010864620}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1328787925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328787923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4748a0d6f3d63a3498c4d29f44a33131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToToggle: {fileID: 1492533628}
-  shouldHideObject: 0
-  shouldShowObject: 0
 --- !u!1 &1333029550
 GameObject:
   m_ObjectHideFlags: 0
@@ -13384,9 +13385,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333029551}
-  - component: {fileID: 1333029552}
+  - component: {fileID: 1333029553}
   m_Layer: 0
-  m_Name: TurnOffOpeningMusic
+  m_Name: StopMusic - Sequence 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13406,9 +13407,9 @@ Transform:
   m_Children:
   - {fileID: 1067160589}
   m_Father: {fileID: 1010864620}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1333029552
+--- !u!114 &1333029553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13417,13 +13418,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333029550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718c36df333b5dd4b9bbb476f9cb0edb, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 138478531}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  stopper: {fileID: 1067160590}
+  linkedAction: {fileID: 1067160590}
 --- !u!4 &1333247113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4585060622950652, guid: 86d84285ef39db64c986f37878b14861, type: 3}
@@ -13434,6 +13435,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4203199286425600, guid: 42612f8b6c0dce8468648f3f08db6d96, type: 3}
   m_PrefabInstance: {fileID: 138924315}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1341064207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341064208}
+  - component: {fileID: 1341064209}
+  m_Layer: 0
+  m_Name: StartRiddle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341064208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341064207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 76533766}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1341064209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341064207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a9d9a29a822c5498b790bd35c9d293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solarRiddle: {fileID: 6809760745491897989}
+  winSequencer: {fileID: 2048892587}
 --- !u!1001 &1347303338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13654,53 +13701,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5819cea5b13f2934a8e13996ff748543, type: 3}
---- !u!1 &1351587682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1351587683}
-  - component: {fileID: 1351587684}
-  m_Layer: 0
-  m_Name: HideSun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1351587683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351587682}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 69975139}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1351587684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351587682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4748a0d6f3d63a3498c4d29f44a33131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToToggle: {fileID: 1492533628}
-  shouldHideObject: 0
-  shouldShowObject: 0
 --- !u!1 &1366337817
 GameObject:
   m_ObjectHideFlags: 0
@@ -14386,7 +14386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446773780}
-  - component: {fileID: 1446773781}
+  - component: {fileID: 1446773782}
   m_Layer: 0
   m_Name: KopernikAnimate - Sequence 14
   m_TagString: Untagged
@@ -14405,11 +14405,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1563280671}
   m_Father: {fileID: 431661570}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1446773781
+--- !u!114 &1446773782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14418,14 +14419,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1446773779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1418075686}
   shouldWorkOnCutsceneStart: 0
   shouldWorkOnCutsceneEnd: 1
-  animator: {fileID: 6174157}
-  animationTrigger: Think
+  linkedAction: {fileID: 1563280672}
 --- !u!1 &1449386074
 GameObject:
   m_ObjectHideFlags: 0
@@ -14961,7 +14961,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1478973763}
   - component: {fileID: 1478973764}
-  - component: {fileID: 1478973765}
   m_Layer: 0
   m_Name: BoneRotation - Sequence 5
   m_TagString: Untagged
@@ -14980,8 +14979,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 409000098}
+  m_Children: []
   m_Father: {fileID: 431661570}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15002,22 +15000,6 @@ MonoBehaviour:
   shouldWorkOnCutsceneEnd: 1
   bone: {fileID: 185414808}
   rotationSpeed: 50
---- !u!114 &1478973765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478973762}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 0}
-  shouldWorkOnCutsceneStart: 0
-  shouldWorkOnCutsceneEnd: 0
-  linkedAction: {fileID: 0}
 --- !u!4 &1484190860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416000, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
@@ -15141,116 +15123,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1492533628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1492533631}
-  - component: {fileID: 1492533630}
-  - component: {fileID: 1492533629}
-  m_Layer: 0
-  m_Name: SunVE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!73398921 &1492533629
-VFXRenderer:
-  serializedVersion: 1
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492533628}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!2083052967 &1492533630
-VisualEffect:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492533628}
-  m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 6e70a1c480e438c418f918c2af375a97, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
-  m_ResetSeedOnPlay: 1
-  m_ResourceVersion: 1
-  m_PropertySheet:
-    m_Float:
-      m_Array: []
-    m_Vector2f:
-      m_Array: []
-    m_Vector3f:
-      m_Array: []
-    m_Vector4f:
-      m_Array: []
-    m_Uint:
-      m_Array: []
-    m_Int:
-      m_Array: []
-    m_Matrix4x4f:
-      m_Array: []
-    m_AnimationCurve:
-      m_Array: []
-    m_Gradient:
-      m_Array: []
-    m_NamedObject:
-      m_Array: []
-    m_Bool:
-      m_Array: []
---- !u!4 &1492533631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492533628}
-  m_LocalRotation: {x: 0.50000006, y: -0.49999997, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08000001, y: 0.08000001, z: 0.08}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5184144533499938138}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1500962987
 GameObject:
   m_ObjectHideFlags: 0
@@ -15418,6 +15290,53 @@ MonoBehaviour:
   shouldWorkOnCutsceneEnd: 1
   bone: {fileID: 649700713}
   rotationSpeed: 50
+--- !u!1 &1504564455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1504564456}
+  - component: {fileID: 1504564457}
+  m_Layer: 0
+  m_Name: AnimatorToggler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504564456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504564455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1236250631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1504564457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504564455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50203337b0d9804ab72aef9e23a5af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6809760745491897988}
+  shouldEnableAnimator: 1
+  shouldDisableAnimator: 0
 --- !u!1 &1504775267
 GameObject:
   m_ObjectHideFlags: 0
@@ -15553,66 +15472,6 @@ Transform:
   m_Father: {fileID: 1212466568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -19.16482, y: 0.6573539, z: -0.5779644}
---- !u!1 &1509714381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1509714384}
-  - component: {fileID: 1509714383}
-  - component: {fileID: 1509714382}
-  m_Layer: 0
-  m_Name: VisualScripting SceneVariables
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1509714382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509714381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1509714383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509714381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!4 &1509714384
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509714381}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514329628
 GameObject:
   m_ObjectHideFlags: 0
@@ -15747,7 +15606,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1515847907}
-  - component: {fileID: 1515847908}
   - component: {fileID: 1515847909}
   m_Layer: 0
   m_Name: DisableAnimator - Sequence 4
@@ -15772,26 +15630,6 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1515847908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515847906}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3d51e8b14f6d742bb2b89bd77468de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 2003974763}
-  shouldWorkOnCutsceneStart: 0
-  shouldWorkOnCutsceneEnd: 1
-  animator: {fileID: 6809760745491897988}
-  shouldEnableAnimatorOnStart: 0
-  shouldDisableAnimatorOnStart: 0
-  shouldEnableAnimatorOnEnd: 0
-  shouldDisableAnimatorOnEnd: 1
 --- !u!114 &1515847909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15953,9 +15791,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529335691}
-  - component: {fileID: 1529335692}
+  - component: {fileID: 1529335693}
   m_Layer: 0
-  m_Name: TurnOnOpeningMusic
+  m_Name: PlayEndingMusic - Sequence 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15975,9 +15813,9 @@ Transform:
   m_Children:
   - {fileID: 1381553300}
   m_Father: {fileID: 1010864620}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1529335692
+--- !u!114 &1529335693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15986,13 +15824,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529335690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5fd2ed63bd80940b516b0c8f67d844, type: 3}
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneController: {fileID: 1021032842}
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
-  player: {fileID: 1381553301}
+  linkedAction: {fileID: 1381553301}
 --- !u!1001 &1532342569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16211,6 +16049,52 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 1
   shouldWorkOnCutsceneEnd: 0
   linkedAction: {fileID: 201564715}
+--- !u!1 &1563280670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563280671}
+  - component: {fileID: 1563280672}
+  m_Layer: 0
+  m_Name: ObjectAnimate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1563280671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563280670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1446773780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563280672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563280670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37d406907fdf104eaecdedafed4903c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6174157}
+  animationTrigger: Think
 --- !u!1001 &1574171381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16485,7 +16369,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581356936}
-  - component: {fileID: 1581356937}
   - component: {fileID: 1581356938}
   m_Layer: 0
   m_Name: SolarAnimate - Sequence 4
@@ -16510,23 +16393,6 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581356937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581356935}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 2003974763}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  animator: {fileID: 6809760745491897988}
-  animationTrigger: FastAnim
 --- !u!114 &1581356938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18530,7 +18396,7 @@ Transform:
   - {fileID: 741287896}
   - {fileID: 1817603598}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1782776185 stripped
 Transform:
@@ -20795,7 +20661,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973449515}
-  - component: {fileID: 1973449516}
   - component: {fileID: 1973449517}
   m_Layer: 0
   m_Name: DomeAnimate - Sequence 3
@@ -20820,23 +20685,6 @@ Transform:
   m_Father: {fileID: 431661570}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1973449516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973449514}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75a67cf32764204ca0ea886197a546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneController: {fileID: 1986876453}
-  shouldWorkOnCutsceneStart: 1
-  shouldWorkOnCutsceneEnd: 0
-  animator: {fileID: 676993314}
-  animationTrigger: OpenDome
 --- !u!114 &1973449517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21532,7 +21380,7 @@ Transform:
   - {fileID: 716776972}
   - {fileID: 1114719915}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2014482778 stripped
 Transform:

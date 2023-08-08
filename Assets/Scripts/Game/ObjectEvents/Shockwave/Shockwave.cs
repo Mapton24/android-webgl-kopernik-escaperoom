@@ -2,14 +2,14 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Shockwave : MonoBehaviour
+public class Shockwave : MonoBehaviour, ICutsceneAction
 {
     [Range(1f, 10f)][SerializeField] private float radius = 5f;
     [Range(1f, 50f)][SerializeField] private float force = 10f;
 
     [Range(0f, 10f)][SerializeField] private float delay = 0f;
 
-    public void ApplyShockwave()
+    public void ExecuteAction()
     {
         StartCoroutine(ShockwaveCoroutine());
     }

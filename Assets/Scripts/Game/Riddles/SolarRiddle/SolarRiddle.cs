@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class SolarRiddle : MonoBehaviour
     [Range(0, 100)]
     private float snatchRadiusShrinker = 10f;
     private Animator animator;
+    public event Action OnRiddleSolved;
 
     private void Awake()
     {
@@ -28,7 +30,6 @@ public class SolarRiddle : MonoBehaviour
         allObjectsSnatched = false;
         riddleSolved = false;
         animator = GetComponent<Animator>();
-        Debug.Log("How many inside the list: " + skinnedMeshRenderers.Count);
     }
     public bool RiddleSolved()
     {
@@ -55,7 +56,7 @@ public class SolarRiddle : MonoBehaviour
                 }
                 clones.Clear();
                 riddleSolved = true;
-                Debug.Log("Still going...");
+                OnRiddleSolved?.Invoke();
             }
         }
 

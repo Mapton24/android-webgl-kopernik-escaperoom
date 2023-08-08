@@ -9,7 +9,6 @@ public class Menu : MonoBehaviour
     private GameObject mainMenuHolder;
     [SerializeField]
     private GameObject optionsMenuHolder;
-    private bool cursorLocked = false;
 
     private void Start()
     {
@@ -22,7 +21,6 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(SceneNames.Game);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cursorLocked = true;
     }
     public void Quit()
     {

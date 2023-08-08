@@ -31,7 +31,6 @@ public class DoorController : MonoBehaviour
         {
             doorAnimator.SetTrigger("OpenDoor");
             doorAnimator.SetTrigger("OpenDoorCollider");
-            Debug.Log("Door opened");
             if (openDoorTrigger != null)
             {
                 openDoorTrigger.GetComponent<Collider>().enabled = false;
@@ -44,7 +43,6 @@ public class DoorController : MonoBehaviour
         {
             doorAnimator.SetTrigger("CloseDoor");
             doorAnimator.SetTrigger("CloseDoorCollider");
-            Debug.Log("Door closed");
             Destroy(closeDoorTrigger);
             if (closeDoorTrigger != null)
             {
