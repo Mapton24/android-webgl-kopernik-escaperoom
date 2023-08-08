@@ -8738,6 +8738,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437120, guid: a898a664488ed1147b5b3d6aecd095f1, type: 3}
   m_PrefabInstance: {fileID: 825342610}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &843149875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843149876}
+  - component: {fileID: 843149877}
+  m_Layer: 0
+  m_Name: ChangeSkyBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843149876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843149875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 935616781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843149877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843149875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff448e2118ae7cb44b465cccecab8817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToChange: {fileID: 33714659}
 --- !u!1001 &849094720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9741,6 +9786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935616781}
   - component: {fileID: 935616782}
+  - component: {fileID: 935616783}
   m_Layer: 0
   m_Name: ChangeCameraSkyBox - Sequence 1
   m_TagString: Untagged
@@ -9759,7 +9805,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 843149876}
   m_Father: {fileID: 431661570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9770,7 +9817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935616780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cd6969ac6b5f86459ad9770a5b57340, type: 3}
   m_Name: 
@@ -9779,6 +9826,22 @@ MonoBehaviour:
   shouldWorkOnCutsceneStart: 0
   shouldWorkOnCutsceneEnd: 1
   cameraToChange: {fileID: 33714659}
+--- !u!114 &935616783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935616780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307cff63387a4e94780e9cfe8fea34f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneController: {fileID: 1588197272}
+  shouldWorkOnCutsceneStart: 0
+  shouldWorkOnCutsceneEnd: 1
+  linkedAction: {fileID: 843149877}
 --- !u!4 &936822295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460100, guid: 5819cea5b13f2934a8e13996ff748543, type: 3}
