@@ -6,10 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MYASSETS/Scenes/MainMenuScene.unity
-    guid: 13df56032614e034eabccbc1f4ef49ff
-  - enabled: 1
-    path: Assets/MYASSETS/Scenes/RoomsScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/MYASSETS/Scenes/Android/MovementTestSceneAndroid.unity
+    guid: 7d4c0332d698665429e0cb5dc91f11b5
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 85f817908677ae44cbc2ff132c28fb28, type: 2}
