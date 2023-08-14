@@ -46,10 +46,20 @@ public class CustomEntranceDoorController : DoorController
     }
     public virtual void EnablePlayerControls()
     {
-        playerCharacter.GetComponent<PlayerWalk>().enabled = true;
+        MonoBehaviour[] scripts = playerCharacter.GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            script.enabled = false;
+        }
+       // playerCharacter.GetComponent<PlayerWalk>().enabled = true;
     }
     public virtual void DisablePlayerControls()
     {
-        playerCharacter.GetComponent<PlayerWalk>().enabled = false;
+        MonoBehaviour[] scripts = playerCharacter.GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            script.enabled = true;
+        }
+       // playerCharacter.GetComponent<PlayerWalk>().enabled = false;
     }
 }

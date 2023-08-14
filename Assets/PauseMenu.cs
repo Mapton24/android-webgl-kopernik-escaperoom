@@ -41,14 +41,14 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenPauseMenuAndroid()
     {
-            if (isPaused)
-            {
-                Resume();
-            }
-            else if (!isPaused)
-            {
-                Pause();
-            }    
+        if (isPaused)
+        {
+            Resume();
+        }
+        else if (!isPaused)
+        {
+            Pause();
+        }
     }
 
     public void Resume()
@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (Application.platform == RuntimePlatform.Android)
+        if (Application.isEditor || Application.platform == RuntimePlatform.Android)
         {
             SceneManager.LoadScene(SceneNames.MainMenuAndroid);
         } else

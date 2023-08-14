@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278063397116392143}
   - component: {fileID: 1997167894}
-  - component: {fileID: 1997167895}
+  - component: {fileID: 1793482639}
   m_Layer: 0
   m_Name: PlayerAndroid
   m_TagString: Player
@@ -52,7 +52,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1997167895
+--- !u!114 &1793482639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,15 +61,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278063397116392128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef84553a8331cd3409cb211a0ded3ea8, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ae2e36d7438cd1478606d9a34390c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrPlayer: {fileID: 1278063397337096566}
-  LookDownAngle: 15
-  Speed: 1
-  MoveForward: 0
-  MoveForwardEditor: 0
-  rotationSpeed: 100
+  player: {fileID: 1278063397337096566}
+  speed: 4
+  gravity: 9.81
+  rotationSpeed: 10
+  cc: {fileID: 1997167894}
+  buttonsPanel: {fileID: 0}
+  maxLookUpAngle: 80
+  maxLookDownAngle: 80
 --- !u!1 &1278063397337096556
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +118,7 @@ Camera:
   m_GameObject: {fileID: 1278063397337096556}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

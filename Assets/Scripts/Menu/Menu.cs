@@ -18,7 +18,14 @@ public class Menu : MonoBehaviour
     }
     public void Play()
     {
-        SceneManager.LoadScene(SceneNames.Game);
+        if(Application.isEditor || Application.platform == RuntimePlatform.Android)
+        {
+            SceneManager.LoadScene(SceneNames.GameAndroid);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneNames.Game);
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
