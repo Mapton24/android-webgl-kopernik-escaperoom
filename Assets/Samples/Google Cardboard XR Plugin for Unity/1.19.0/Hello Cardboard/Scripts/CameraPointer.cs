@@ -67,12 +67,12 @@ public class CameraPointer : MonoBehaviour
         }
         Debug.DrawRay(transform.position, transform.forward * _maxDistance, Color.red);
 
-        //Sprawdzamy czy kliknęliśmy button czy LMB 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
-        //    ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
-        //}
+        //Sprawdzamy czy kliknęliśmy button czy LMB
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
+            ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+        }
     }
     public void HandlePickUpButtonClick()
     {
