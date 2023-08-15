@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DoorLayer
   - PlacementSpace
+  - ButtonsPanelTag
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Player
   - DoorLayer
   - InvisibleRoom
-  - 
+  - ButtonsPanelTag
   - 
   - 
   - 

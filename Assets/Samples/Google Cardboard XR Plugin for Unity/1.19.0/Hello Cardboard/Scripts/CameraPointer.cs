@@ -67,14 +67,18 @@ public class CameraPointer : MonoBehaviour
         }
         Debug.DrawRay(transform.position, transform.forward * _maxDistance, Color.red);
 
-        //Sprawdzamy czy kliknęliśmy ekran telefonu czy LMB 
-        if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetMouseButtonDown(0))
-        {
-            //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
-            ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
-        }
+        //Sprawdzamy czy kliknęliśmy button czy LMB 
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
+        //    ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+        //}
     }
-
+    public void HandlePickUpButtonClick()
+    {
+        // Execute the pointerClickAction when the button is clicked
+        ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+    }
     //Metoda która sprawdza czy dany obiekt jest null, jeżeli nie jest to robi event.
     private void ExecuteIfNotNull(GameObject obj, Action<GameObject, BaseEventData> action)
     {
