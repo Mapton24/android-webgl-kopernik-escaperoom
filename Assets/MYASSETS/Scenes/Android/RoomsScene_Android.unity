@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.009993603, g: 0.034375735, b: 0.07435474, a: 1}
+  m_IndirectSpecularColor: {r: 0.009918719, g: 0.034518808, b: 0.07588397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 543986258}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 997b70e16f3e2024f8274218563f9f72, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -1584,7 +1584,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1995244679}
   cutsceneDuration: 5
   cutsceneSequencer: {fileID: 2048892587}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: d45914d41ce5c4a49a9ce9a5324a6467, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -1903,6 +1903,134 @@ Transform:
   m_Father: {fileID: 1044477661}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &175455171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175455172}
+  - component: {fileID: 175455173}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &175455172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175455171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1044477661}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &175455173
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175455171}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &185414808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 625531752351965116, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
@@ -2087,7 +2215,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1500962991}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: a62c88210726f7942aac495d8667e6e9, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -7700,7 +7828,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 12006840}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: b9659a1c54e2bed42a1a8d46c03802dd, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -9515,6 +9643,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 173663246}
+  - {fileID: 175455172}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10542,7 +10671,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1869825315}
   cutsceneDuration: 3
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: a62c88210726f7942aac495d8667e6e9, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -11893,7 +12022,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 435699247}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 7b8b601b86fbe3742a8774706e2f309e, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -12641,7 +12770,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1575327524}
   cutsceneDuration: 5
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 481b4c3f202febc49ad921d97680ab10, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -13013,7 +13142,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1491487475}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 33a0b5a1b4dc00f4ab8c484c70c0e64d, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -13114,7 +13243,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1616208772}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 2f693c10e5b781d4780720c1312bb0eb, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -14160,7 +14289,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 858613852}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 431dd9757f2087c41b642e313c0a8937, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -15082,7 +15211,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1504775271}
   cutsceneDuration: 1
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 7260aee58bb0fd744b7be36c8f69cb2e, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -16707,7 +16836,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1966160032}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 971c18903d7fc7f4aa7651c4ede7b25f, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -17435,7 +17564,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 484199779}
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 07a5f94c3796e8b48bc9cac125c005af, type: 3}
   audioSource: {fileID: 0}
   audioDelay: 0
   flashImage: {fileID: 0}
