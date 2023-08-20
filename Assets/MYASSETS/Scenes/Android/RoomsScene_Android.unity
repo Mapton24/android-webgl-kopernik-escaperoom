@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.009918719, g: 0.034518808, b: 0.07588397, a: 1}
+  m_IndirectSpecularColor: {r: 0.009993603, g: 0.034375735, b: 0.07435474, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 997b70e16f3e2024f8274218563f9f72, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   cutsceneDuration: 5
   cutsceneSequencer: {fileID: 2048892587}
   sound: {fileID: 8300000, guid: d45914d41ce5c4a49a9ce9a5324a6467, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
 --- !u!1001 &138924315
@@ -2216,7 +2216,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: a62c88210726f7942aac495d8667e6e9, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -7829,7 +7829,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: b9659a1c54e2bed42a1a8d46c03802dd, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -10672,7 +10672,7 @@ MonoBehaviour:
   cutsceneDuration: 3
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: a62c88210726f7942aac495d8667e6e9, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
 --- !u!1001 &1163471026
@@ -12023,7 +12023,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 7b8b601b86fbe3742a8774706e2f309e, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -12771,7 +12771,7 @@ MonoBehaviour:
   cutsceneDuration: 5
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 481b4c3f202febc49ad921d97680ab10, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
 --- !u!1 &1420563624
@@ -13143,7 +13143,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 33a0b5a1b4dc00f4ab8c484c70c0e64d, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -13244,7 +13244,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 2f693c10e5b781d4780720c1312bb0eb, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -14290,7 +14290,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 431dd9757f2087c41b642e313c0a8937, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -15212,7 +15212,7 @@ MonoBehaviour:
   cutsceneDuration: 1
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 7260aee58bb0fd744b7be36c8f69cb2e, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
 --- !u!4 &1588197273
@@ -16837,7 +16837,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 971c18903d7fc7f4aa7651c4ede7b25f, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
@@ -17565,7 +17565,7 @@ MonoBehaviour:
   cutsceneDuration: 2
   cutsceneSequencer: {fileID: 483360706}
   sound: {fileID: 8300000, guid: 07a5f94c3796e8b48bc9cac125c005af, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
   transitionDuration: 2
