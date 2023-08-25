@@ -28,7 +28,7 @@ public class AnimationCutscene : CutsceneController
         if (cameraAnimation.clip != null && cameraAnimation != null)
         {
             PlayAnimation(cameraAnimation);
-            yield return new WaitForSeconds(totalDuration);
+            yield return new WaitForSeconds(cutsceneDuration);
             if (isPartOfSequence)
             UpdateCameraTransform();
         }
@@ -47,6 +47,7 @@ public class AnimationCutscene : CutsceneController
         }
 
     }
+
 
     private void PlayAnimation(Animation cameraAnimation)
     {

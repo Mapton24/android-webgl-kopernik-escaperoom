@@ -133,7 +133,7 @@ public class CutsceneController : MonoBehaviour
         mainCamera.enabled = false;
         cutsceneCamera.enabled = true;
     }
-    private void PrepareSoundDuration()
+    protected virtual void PrepareSoundDuration()
     {
         if (sound != null)
         {
