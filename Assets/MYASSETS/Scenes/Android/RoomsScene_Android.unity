@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.009954093, g: 0.034211174, b: 0.07406356, a: 1}
+  m_IndirectSpecularColor: {r: 0.00995028, g: 0.034223437, b: 0.07406213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9688,7 +9688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.80784315}
+  m_Color: {r: 0.10849059, g: 1, b: 0.601443, a: 0.6509804}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17425,6 +17425,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 645877133, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
+    - target: {fileID: 645877133, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
     - target: {fileID: 748201610, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_SizeDelta.x
       value: 350
@@ -17458,13 +17466,29 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 909683305, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
+    - target: {fileID: 909683305, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 909683305, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
     - target: {fileID: 1003944910, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1218668116, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
+    - target: {fileID: 1218668116, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 6011c246d5a820e4f9247e04e44f7817, type: 2}
     - target: {fileID: 1249653167, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
@@ -17891,7 +17915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2099544479, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2099544479, guid: d650f3c9ce1ecb34fac9ba7cdc15e535, type: 3}
       propertyPath: m_AnchoredPosition.x
