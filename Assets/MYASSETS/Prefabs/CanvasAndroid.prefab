@@ -1405,7 +1405,6 @@ RectTransform:
   - {fileID: 1249653167}
   - {fileID: 257522595}
   - {fileID: 1767329816}
-  - {fileID: 2099544479}
   m_Father: {fileID: 1236350325021928153}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1830,9 +1829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd6252bb252a64586dac2606590eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIToHideList: []
   pauseMenuUI: {fileID: 1003944910}
-  gameCursor: {fileID: 1236350323714525188}
-  pauseButton: {fileID: 2099544480}
 --- !u!1 &2099544478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,12 +1862,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1690519344}
-  m_RootOrder: 4
+  m_Father: {fileID: 1236350325021928153}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 27, y: 880}
+  m_AnchoredPosition: {x: 1107, y: -160}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2099544482
@@ -2150,6 +2148,7 @@ RectTransform:
   - {fileID: 1987325475}
   - {fileID: 1003944911}
   - {fileID: 1690519344}
+  - {fileID: 2099544479}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
