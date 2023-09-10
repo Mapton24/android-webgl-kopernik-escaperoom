@@ -38,7 +38,15 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.009946734, g: 0.034209423, b: 0.074057736, a: 1}
+=======
+<<<<<<< Updated upstream
+  m_IndirectSpecularColor: {r: 0.009993603, g: 0.034375735, b: 0.07435474, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.009942292, g: 0.03420309, b: 0.074030325, a: 1}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1515,9 +1523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneCamera: {fileID: 1995244679}
-  cutsceneDuration: 5
+  cutsceneDuration: 0
   cutsceneSequencer: {fileID: 2048892587}
-  sound: {fileID: 8300000, guid: 52070dbee9da8bc48a75625320c86367, type: 3}
+  sound: {fileID: 8300000, guid: a6f34fa25dea8c24aacfed2b5d29c526, type: 3}
   audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -8204,7 +8212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff448e2118ae7cb44b465cccecab8817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraToChange: {fileID: 0}
+  cameraToChange: {fileID: 1999737771}
 --- !u!1001 &849094720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10048,7 +10056,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d2abb26ff4707240ae1f3ed17750714, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 062af02546247994eafc7193675151c9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13517,7 +13525,7 @@ MonoBehaviour:
   cutsceneCamera: {fileID: 1575327524}
   cutsceneDuration: 0
   cutsceneSequencer: {fileID: 483360706}
-  sound: {fileID: 8300000, guid: efe61bd53f13eec4eb33d62217dfbb58, type: 3}
+  sound: {fileID: 8300000, guid: 193828c76412857469588ee663162800, type: 3}
   audioSource: {fileID: 175455173}
   audioDelay: 0
   flashImage: {fileID: 0}
@@ -21439,6 +21447,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebfb4b86b2e54606894da54f755db2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &1999737771 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1278063397337096567, guid: b991a66e1cd22964fb3fa063beeb7b40, type: 3}
+  m_PrefabInstance: {fileID: 357974076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2003974761
 GameObject:
   m_ObjectHideFlags: 0
@@ -22613,6 +22626,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 08d89c54f47199945a768fb9f369daec, type: 2}
+    - target: {fileID: 816052271130943347, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Jowisz
+      objectReference: {fileID: 0}
     - target: {fileID: 1313703096870617441, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
       propertyPath: m_Name
       value: SolarSystem
@@ -22689,6 +22706,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2750513513682339229, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Ziemia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144987164714885450, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Wenus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298205156626196968, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Neptun
+      objectReference: {fileID: 0}
     - target: {fileID: 5572215092554780684, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
@@ -22725,6 +22754,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2675bae52d14614a85879480790c832, type: 2}
+    - target: {fileID: 6217236547388672154, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Merkury
+      objectReference: {fileID: 0}
     - target: {fileID: 6674805403902538804, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
@@ -22805,6 +22838,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 45f11d385386b1544aaeb403ff8726db, type: 2}
+    - target: {fileID: 8344386823935598426, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: "S\u0142o\u0144ce"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849474946722020962, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: "Ksi\u0119\u017Cyc"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167022604785688787, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
+      propertyPath: m_Name
+      value: Uran
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6e166c6b4a50e4689bcad80017cb40, type: 3}
 --- !u!4 &5184144533499938137 stripped
