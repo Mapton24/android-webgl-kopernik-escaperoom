@@ -38,6 +38,13 @@ public class PlayerWalkMobile : MonoBehaviour
         CalculateGravity();
         CalculateMovement();
     }
+    private void OnDisable()
+    {
+        moveForward = false;
+        moveBackward = false;
+        strafeLeft = false;
+        strafeRight = false;
+    }
     private void CalculateGravity()
     {
         Vector3 gravityVector = Vector3.down * gravity * Time.deltaTime;

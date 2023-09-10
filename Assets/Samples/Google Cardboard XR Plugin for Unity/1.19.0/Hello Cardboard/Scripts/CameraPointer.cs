@@ -35,12 +35,19 @@ public class CameraPointer : MonoBehaviour
     private Action<GameObject, BaseEventData> pointerExitAction;
     private Action<GameObject, BaseEventData> pointerClickAction;
 
+    [SerializeField] private bool isTestingAndroid = false;
+    private bool isAndroidBuild = false;
+    [SerializeField] private bool isTestingWebGL = false;
+    private bool isWebGLBuild = false;
     private void Awake()
     {
         //Inicjalizujemy akcje dla każdego typu eventów do obiektów 
         pointerEnterAction = ExecutePointerEvent<IPointerEnterHandler>(ExecutePointerEnter);
         pointerExitAction = ExecutePointerEvent<IPointerExitHandler>(ExecutePointerExit);
         pointerClickAction = ExecutePointerEvent<IPointerClickHandler>(ExecutePointerClick);
+        isWebGLBuild = Application.platform == RuntimePlatform.WebGLPlayer;
+        isAndroidBuild = Application.platform == RuntimePlatform.Android;
+
     }
 
     private void Update()
@@ -68,16 +75,23 @@ public class CameraPointer : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * _maxDistance, Color.red);
 
         //Sprawdzamy czy kliknęliśmy button czy LMB
-        if (Input.GetMouseButtonDown(0))
+        if (isTestingWebGL || isWebGLBuild)
         {
-            //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
-            ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+            if (Input.GetMouseButtonDown(0))
+            {
+                //Odpala się event OnPointerClick jeżeli patrzymy na dany obiekt
+                ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+            }
         }
+        
     }
     public void HandlePickUpButtonClick()
     {
-        // Execute the pointerClickAction when the button is clicked
-        ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+        if (isTestingAndroid || isAndroidBuild)
+        {
+            ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
+            // Execute the pointerClickAction when the button is clicked
+        }
     }
     //Metoda która sprawdza czy dany obiekt jest null, jeżeli nie jest to robi event.
     private void ExecuteIfNotNull(GameObject obj, Action<GameObject, BaseEventData> action)
