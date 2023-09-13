@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.009946734, g: 0.034209423, b: 0.074057736, a: 1}
+  m_IndirectSpecularColor: {r: 0.010039397, g: 0.034643054, b: 0.0753558, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneCamera: {fileID: 1995244679}
-  cutsceneDuration: 5
+  cutsceneDuration: 0
   cutsceneSequencer: {fileID: 2048892587}
   sound: {fileID: 8300000, guid: 52070dbee9da8bc48a75625320c86367, type: 3}
   audioSource: {fileID: 175455173}

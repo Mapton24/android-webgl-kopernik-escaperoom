@@ -156,7 +156,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.SBI.GSOTKopernik_PL
-    Standalone: com.SbinoCompany.Android-VR
+    Standalone: com.SBI.GSOT-Kopernik-PL
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 3cf7fa61e84a6ee4c83b1134f737e156, type: 3}
+      m_Icon: {fileID: 2800000, guid: ba6944a8d1573b04e871d62f4413fb6b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -750,7 +750,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
