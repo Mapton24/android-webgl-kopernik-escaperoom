@@ -18,13 +18,13 @@ public class Menu : MonoBehaviour
     }
     public void Play()
     {
-        if(Application.isEditor || Application.platform == RuntimePlatform.Android)
+        if(Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
         {
             SceneManager.LoadScene(SceneNames.GameAndroid);
         }
         else
         {
-            SceneManager.LoadScene(SceneNames.Game);
+            SceneManager.LoadScene(SceneNames.GameAndroid);
         }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

@@ -39,6 +39,7 @@ public class CameraPointer : MonoBehaviour
     private bool isAndroidBuild = false;
     [SerializeField] private bool isTestingWebGL = false;
     private bool isWebGLBuild = false;
+    private bool isIphoneBuild = false;
     private void Awake()
     {
         //Inicjalizujemy akcje dla każdego typu eventów do obiektów 
@@ -47,6 +48,7 @@ public class CameraPointer : MonoBehaviour
         pointerClickAction = ExecutePointerEvent<IPointerClickHandler>(ExecutePointerClick);
         isWebGLBuild = Application.platform == RuntimePlatform.WebGLPlayer;
         isAndroidBuild = Application.platform == RuntimePlatform.Android;
+        isIphoneBuild = Application.platform == RuntimePlatform.IPhonePlayer;
 
     }
 
@@ -87,7 +89,7 @@ public class CameraPointer : MonoBehaviour
     }
     public void HandlePickUpButtonClick()
     {
-        if (isTestingAndroid || isAndroidBuild)
+        if (isTestingAndroid || isAndroidBuild || isIphoneBuild)
         {
             ExecuteIfNotNull(_gazedAtObject, pointerClickAction);
             // Execute the pointerClickAction when the button is clicked

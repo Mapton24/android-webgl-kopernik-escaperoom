@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (Application.isEditor || Application.platform == RuntimePlatform.Android)
+        if (Application.isEditor || Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
         {
             SceneManager.LoadScene(SceneNames.MainMenuAndroid);
         } else
